@@ -1,0 +1,149 @@
+.App {
+  text-align: left;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.App-header {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.App-header h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #fff, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.App-header p {
+  margin: 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.App-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.wireframe-section,
+.flow-diagram-section {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.wireframe-section h2,
+.flow-diagram-section h2 {
+  margin: 0 0 1.5rem 0;
+  font-size: 2rem;
+  color: #fff;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.wireframe-description h3,
+.flow-description h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.wireframe-description p,
+.flow-description p {
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.wireframe-description h4,
+.flow-description h4 {
+  margin: 1.5rem 0 1rem 0;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.wireframe-description ul,
+.flow-description ul,
+.flow-description ol {
+  margin: 0 0 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.wireframe-description li,
+.flow-description li {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.wireframe-description strong,
+.flow-description strong {
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.flow-description ol {
+  counter-reset: step-counter;
+}
+
+.flow-description ol li {
+  counter-increment: step-counter;
+  margin: 1rem 0;
+  padding-left: 0.5rem;
+}
+
+.flow-description ol li::before {
+  content: counter(step-counter);
+  background: #ffd700;
+  color: #333;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.flow-description ul li {
+  list-style-type: none;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.flow-description ul li::before {
+  content: "•";
+  color: #ffd700;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .App-header h1 {
+    font-size: 2rem;
+  }
+  
+  .App-main {
+    padding: 1rem;
+  }
+  
+  .wireframe-section,
+  .flow-diagram-section {
+    padding: 1.5rem;
+  }
+}
